@@ -1,85 +1,212 @@
-<div align="center">
 
-# ?? RecipeGenie — N?n T?ng Th?c Hành Làm S?ch D? Li?u
+# N?n t?ng th?c hành làm s?ch d? li?u (Data Cleaning Practice Platform)
 
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
-![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+## Ð?i tý?ng s? d?ng
 
-**RecipeGenie là h? th?ng web giúp th?c hành, mô ph?ng và tr?c quan hóa các k? thu?t làm s?ch, x? l? d? li?u th?c t?.**
+- Sinh viên, h?c viên ngành Khoa h?c d? li?u, K? thu?t d? li?u, AI, Machine Learning.
+- Gi?ng viên, tr? gi?ng mu?n t? ch?c th?c hành làm s?ch d? li?u.
+- Nhà phân tích d? li?u, k? sý d? li?u mu?n th? nghi?m quy tr?nh làm s?ch, chu?n hóa d? li?u th?c t?.
 
-[?? Demo (n?u có)](#) • [?? Báo l?i](../../issues) • [? Ð? xu?t tính nãng](../../issues)
+## M?c tiêu d? án
 
-</div>
+- Cung c?p môi trý?ng th?c hành tr?c quan, t?ng bý?c v? làm s?ch d? li?u b?o tr? d? ðoán (Predictive Maintenance).
+- H? tr? phân tích, phát hi?n v?n ð? d? li?u, th?c hành các k? thu?t x? l? giá tr? thi?u, trùng l?p, ngo?i lai, chu?n hóa, m? hóa, t?o ð?c trýng.
+- T?o b? d? li?u "b?n" có ki?m soát ð? luy?n t?p k? nãng làm s?ch và ðánh giá hi?u qu?.
 
----
 
-## ?? M?c l?c
+## Gi?i thi?u
 
-- [Gi?i thi?u](#gi?i-thi?u)
-- [Tính nãng n?i b?t](#tính-nãng-n?i-b?t)
-- [Cài ð?t & Kh?i ch?y](#cài-ð?t--kh?i-ch?y)
-- [Hý?ng d?n s? d?ng](#hý?ng-d?n-s?-d?ng)
-- [Công ngh? s? d?ng](#công-ngh?-s?-d?ng)
-- [C?u trúc d? án](#c?u-trúc-d?-án)
-- [Ðóng góp](#ðóng-góp)
-- [Gi?y phép](#gi?y-phép)
+Ðây là n?n t?ng web týõng tác giúp phân tích d? li?u th?c hành các k? nãng làm s?ch d? li?u trên b? d? li?u b?o tr? d? ðoán (ví d?: AI4I 2020). ?ng d?ng xây d?ng b?ng [Streamlit](https://streamlit.io/) v?i giao di?n tr?c quan, thao tác t?ng bý?c, phù h?p cho h?c t?p, th?c hành và tr?nh di?n.
 
----
+## Tính nãng n?i b?t
+- **T?i lên d? li?u**: H? tr? upload nhi?u file CSV, ki?m tra c?u trúc, xem trý?c d? li?u.
+- **T?ng quan d? li?u**: Phân tích nhanh s? d?ng, s? c?t, ki?u d? li?u, giá tr? thi?u, phân ph?i, tr?c quan hóa, phát hi?n ngo?i lai.
+- **T?o d? li?u b?n**: Sinh d? li?u "b?n" có ki?m soát (giá tr? thi?u, ngo?i lai, l?i phân lo?i) ð? th?c hành làm s?ch.
+- **Làm s?ch d? li?u**: Áp d?ng nhi?u k? thu?t x? l? giá tr? thi?u, lo?i b? ngo?i lai, chu?n hóa, m? hóa, phát hi?n và s?a l?i ki?u d? li?u, lo?i b? trùng l?p.
+- **Tr?c quan hóa**: Ða d?ng bi?u ð? (histogram, boxplot, heatmap, correlation, bar chart) giúp hi?u sâu v? d? li?u và ch?t lý?ng d? li?u.
+- **So sánh trý?c/sau**: Ðánh giá hi?u qu? làm s?ch qua các ch? s? ch?t lý?ng và tr?c quan hóa.
+- **Xu?t d? li?u & báo cáo**: T?i v? d? li?u ð? làm s?ch ? nhi?u ð?nh d?ng (CSV, Excel, JSON, ZIP), sinh báo cáo markdown t?ng h?p quá tr?nh x? l?.
 
-## ?? Gi?i thi?u
+## Hý?ng d?n cài ð?t
 
-RecipeGenie là n?n t?ng h?c t?p, th?c hành và ki?m th? các k? thu?t làm s?ch d? li?u dành cho sinh viên, nhà phân tích d? li?u và gi?ng viên. ?ng d?ng h? tr? t?i lên, sinh d? li?u b?n, làm s?ch, tr?c quan hóa và xu?t d? li?u v?i giao di?n thân thi?n, thao tác tr?c quan.
+### 1. Yêu c?u h? th?ng
+- Python >= 3.8
+- pip
+- Ð? xu?t: Chrome/Edge/Firefox m?i nh?t
 
-## ?? Tính nãng n?i b?t
-
-- **T?i lên & khám phá d? li?u**: H? tr? file CSV, xem trý?c, th?ng kê nhanh.
-- **Sinh d? li?u b?n có ki?m soát**: T?o missing values, outliers, l?i phân lo?i, mô ph?ng d? li?u th?c t?.
-- **Làm s?ch d? li?u týõng tác**: Nhi?u phýõng pháp x? l? missing values, phát hi?n & x? l? outlier, chu?n hóa, m? hóa bi?n phân lo?i.
-- **Tr?c quan hóa ch?t lý?ng d? li?u**: Heatmap missing, bi?u ð? phân ph?i, dashboard ch?t lý?ng.
-- **Xu?t d? li?u & báo cáo**: H? tr? nhi?u ð?nh d?ng (CSV, Excel, JSON), sinh báo cáo Markdown t? ð?ng.
-
-## ? Cài ð?t & Kh?i ch?y
-
+### 2. Cài ð?t thý vi?n
 ```bash
-git clone https://github.com/yourusername/RecipeGenie.git
-cd RecipeGenie
 pip install -r requirements.txt
+```
 
-Kh?i ch?y ?ng d?ng
+### 3. Ch?y ?ng d?ng
+```bash
+streamlit run app.py
+```
+Sau ðó truy c?p ð?a ch? hi?n th? trên terminal (thý?ng là http://localhost:8501).
 
-streamlit run app.py --server.port 5000
-Sau ðó truy c?p http://localhost:5000 trên tr?nh duy?t.
+## C?u trúc thý m?c
 
-?? Hý?ng d?n s? d?ng
-T?i d? li?u: Vào trang "T?i D? Li?u", upload file CSV, ki?m tra preview.
-Khám phá d? li?u: Xem th?ng kê, bi?u ð? t?ng quan.
-Sinh d? li?u b?n: Tùy ch?nh t? l? missing, outlier, l?i phân lo?i.
-Làm s?ch d? li?u: Ch?n phýõng pháp x? l? phù h?p cho t?ng lo?i l?i.
-Tr?c quan hóa: Theo d?i ch?t lý?ng d? li?u qua dashboard, bi?u ð?.
-Xu?t d? li?u: T?i v? d? li?u ð? làm s?ch ho?c báo cáo chi ti?t.
-??? Công ngh? s? d?ng
-Streamlit: Giao di?n web týõng tác
-Pandas, NumPy: X? l? d? li?u
-Scikit-learn, SciPy: Ti?n x? l?, phát hi?n outlier
-Plotly, Seaborn, Matplotlib: Tr?c quan hóa d? li?u
-Openpyxl, xlsxwriter: H? tr? xu?t Excel
-?? C?u trúc d? án
-RecipeGenie/
-??? app.py                # File ch?y chính
-??? pages/                # Các trang ch?c nãng (Streamlit)
-?   ??? 1_Data_Upload.py
-?   ??? 2_Data_Overview.py
-?   ??? 3_Generate_Dirty_Data.py
-?   ??? 4_Data_Cleaning.py
-?   ??? 5_Export_Data.py
-??? utils/                # Module x? l? d? li?u
-?   ??? data_cleaner.py
-?   ??? data_processor.py
-?   ??? dirty_data_generator.py
-?   ??? visualizer.py
-??? attached_assets/      # Tài s?n ðính kèm (n?u có)
-??? pyproject.toml        # C?u h?nh Python project
-??? requirements.txt      # Danh sách thý vi?n c?n cài
-??? .gitignore            # File lo?i tr? Git
-??? [README.md](http://_vscodecontentref_/2)             # Tài li?u này
+```
+??? app.py                  # File kh?i ð?ng ?ng d?ng Streamlit
+??? requirements.txt        # Danh sách thý vi?n Python c?n cài
+??? pyproject.toml, uv.lock # (N?u dùng pip/poetry/uv)
+??? pages/                  # Các trang ch?c nãng (multi-page)
+?   ??? 1_Data_Upload.py        # Trang t?i d? li?u
+?   ??? 2_Data_Overview.py      # Trang t?ng quan & phân tích d? li?u
+?   ??? 3_Generate_Dirty_Data.py# Trang t?o d? li?u b?n
+?   ??? 4_Data_Cleaning.py      # Trang làm s?ch d? li?u
+?   ??? 5_Export_Data.py        # Trang xu?t d? li?u & báo cáo
+??? utils/                  # Thý vi?n x? l? nghi?p v?
+?   ??? data_processor.py       # X? l? t?ng quan, ki?m tra, so sánh d? li?u
+?   ??? data_cleaner.py         # Các hàm làm s?ch d? li?u
+?   ??? dirty_data_generator.py # Sinh d? li?u b?n
+?   ??? visualizer.py           # Tr?c quan hóa d? li?u
+??? README.md               # Tài li?u này
+```
+
+
+---
+
+## 1. Phân tích khám phá d? li?u (Exploratory Data Analysis)
+
+### 1.1. Kích thý?c và c?u trúc d? li?u
+- Th?ng kê s? d?ng, s? c?t, ki?u d? li?u t?ng c?t, b? nh? s? d?ng.
+- Ki?m tra tên c?t, ð?nh d?ng, phát hi?n c?t ð?nh danh, c?t m?c tiêu.
+
+### 1.2. Ki?m tra trùng l?p
+- Phát hi?n và th?ng kê s? d?ng trùng l?p hoàn toàn ho?c theo m?t s? c?t chính (ví d?: Machine_ID, timestamp).
+- Ðánh giá ?nh hý?ng c?a d? li?u trùng l?p ð?n phân tích và mô h?nh hóa.
+
+### 1.3. Phân tích giá tr? thi?u (Missing values)
+- Th?ng kê t?ng s? và t? l? giá tr? thi?u theo t?ng c?t.
+- Tr?c quan hóa missing values (bar chart, heatmap).
+- Phân tích m?i liên h? gi?a missing và các bi?n khác.
+
+### 1.4. Phân tích bi?n ð?nh danh (Machine_ID)
+- Ki?m tra tính duy nh?t, phân ph?i s? lý?ng b?n ghi theo t?ng máy.
+- Phát hi?n các giá tr? b?t thý?ng, l?i ð?nh danh, ho?c máy có quá ít d? li?u.
+
+### 1.5. Phân tích bi?n m?c tiêu (Failure)
+- Th?ng kê t? l? các giá tr? c?a bi?n m?c tiêu (0/1, healthy/failure).
+- Ki?m tra s? m?t cân b?ng l?p (class imbalance).
+- Tr?c quan hóa phân ph?i failure theo máy, theo th?i gian.
+
+### 1.6. Phân tích giá tr? ngo?i lai (Outliers)
+- Phát hi?n ngo?i lai b?ng IQR, Z-score, boxplot cho các bi?n s?.
+- Th?ng kê s? lý?ng, t? l? ngo?i lai t?ng c?t.
+- Ðánh giá ?nh hý?ng c?a outlier ð?n phân ph?i d? li?u.
+
+### 1.7. Phân tích phân ph?i d? li?u theo máy
+- Th?ng kê, tr?c quan hóa các bi?n s? theo t?ng máy (mean, std, min, max).
+- So sánh s? khác bi?t gi?a các máy.
+
+### 1.8. D? li?u theo chu?i th?i gian
+- Ki?m tra, tr?c quan hóa d? li?u d?ng time series (theo timestamp).
+- Phân tích missing, outlier, failure theo th?i gian.
+
+---
+
+## 2. Quy tr?nh làm s?ch d? li?u (Data Cleaning Pipeline)
+
+### 2.1. Lo?i b? d? li?u trùng l?p
+- Xác ð?nh và lo?i b? các d?ng trùng l?p hoàn toàn ho?c theo các c?t chính.
+
+### 2.2. Chu?n hóa ð?nh danh máy (Machine_ID)
+- Chu?n hóa ð?nh d?ng, lo?i b? k? t? th?a, ð?ng nh?t ki?u d? li?u.
+- G?p các giá tr? týõng ðýõng, phát hi?n l?i nh?p li?u.
+
+### 2.3. Chu?n hóa bi?n m?c tiêu (Failure)
+- Ð?m b?o ch? có 2 giá tr? h?p l? (0/1 ho?c healthy/failure).
+- S?a các giá tr? sai ð?nh d?ng, ði?n giá tr? thi?u h?p l?.
+
+### 2.4. Chu?n hóa ki?u d? li?u
+- Chuy?n ð?i các c?t v? ðúng ki?u (s?, chu?i, datetime).
+- Phát hi?n và s?a l?i ki?u d? li?u t? ð?ng.
+
+### 2.5. Lo?i b? các giá tr? ngo?i lai (Outliers)
+- Áp d?ng IQR, Z-score, Isolation Forest ð? phát hi?n và lo?i b? ho?c thay th? outlier.
+- Có th? ch?n c?t, ngý?ng, phýõng pháp phù h?p.
+
+### 2.6. Resampling d? li?u theo chu?i th?i gian
+- Chu?n hóa t?n su?t l?y m?u (ví d?: m?i 10 phút, 1 gi?).
+- X? l? các trý?ng h?p thi?u timestamp, d? li?u không liên t?c.
+
+### 2.7. Ði?n d? li?u thi?u (Imputation)
+- V?i c?t phân lo?i (Machine_ID, Failure): ði?n t?i (forward fill) ð? gi? tr?ng thái máy nh?t quán.
+- V?i c?t s?: dùng mean, median, interpolate, KNN, ho?c giá tr? ð?c bi?t.
+
+### 2.8. Ghép d? li?u ð? x? l?
+- K?t h?p các ph?n d? li?u ð? làm s?ch thành b? d? li?u hoàn ch?nh.
+
+---
+
+## 3. Feature Engineering (T?o ð?c trýng)
+
+### 3.1. Sao lýu d? li?u
+- Lýu l?i b?n g?c và t?ng bý?c x? l? ð? d? dàng so sánh, rollback.
+
+### 3.2. T?o ð?c trýng Rolling Mean và Rolling STD (6h)
+- Tính trung b?nh trý?t, ð? l?ch chu?n trý?t cho các bi?n s? theo t?ng máy, c?a s? th?i gian 6h.
+
+### 3.3. T?o lag features
+- T?o các ð?c trýng giá tr? trý?c ðó (lag 1, lag 2, ...), giúp mô h?nh h?c ðý?c xu hý?ng th?i gian.
+
+### 3.4. X? l? giá tr? thi?u sau khi t?o ð?c trýng th?i gian
+- Ði?n giá tr? thi?u phát sinh do rolling, lag b?ng forward fill, backward fill ho?c giá tr? ð?c bi?t.
+
+### 3.5. Ki?m tra, ðánh giá và hi?u r? ð?c trýng
+- Th?ng kê, tr?c quan hóa các ð?c trýng m?i, ki?m tra phân ph?i, týõng quan v?i bi?n m?c tiêu.
+
+### 3.6. Phân tích ð?c trýng thông qua tr?c quan hóa
+- S? d?ng bi?u ð?, heatmap, boxplot ð? ðánh giá giá tr? c?a các ð?c trýng m?i.
+
+---
+
+### 1. T?i d? li?u (`1_Data_Upload.py`)
+- T?i lên 1 ho?c nhi?u file CSV.
+- Ki?m tra c?u trúc, xem trý?c, xác ð?nh c?t ID, target, c?nh báo thi?u c?t.
+- Ch?n d? li?u g?c ho?c d? li?u b?n ð? ti?p t?c x? l?.
+
+### 2. T?ng quan d? li?u (`2_Data_Overview.py`)
+- Th?ng kê s? d?ng, s? c?t, ki?u d? li?u, giá tr? thi?u, b? nh?.
+- Ch?m ði?m ch?t lý?ng d? li?u (missing, duplicate, outlier, overall).
+- Tr?c quan hóa: missing values, phân ph?i, boxplot, heatmap, correlation, categorical.
+- Phát hi?n ngo?i lai, mô t? th?ng kê.
+
+### 3. T?o d? li?u b?n (`3_Generate_Dirty_Data.py`)
+- C?u h?nh t? l? giá tr? thi?u, ngo?i lai, l?i phân lo?i.
+- Sinh d? li?u b?n t? d? li?u g?c ð? th?c hành làm s?ch.
+- So sánh d? li?u g?c và d? li?u b?n.
+
+### 4. Làm s?ch d? li?u (`4_Data_Cleaning.py`)
+- X? l? giá tr? thi?u: mean, median, mode, ffill, bfill, interpolate, knn, constant, custom, drop row/col.
+- Lo?i b? ngo?i lai: IQR, Z-score, Isolation Forest.
+- Chu?n hóa, m? hóa bi?n phân lo?i: label, onehot, frequency.
+- Chu?n hóa s?: standard, minmax, robust.
+- Lo?i b? trùng l?p, t? ð?ng phát hi?n & s?a ki?u d? li?u.
+- T?ng k?t quá tr?nh làm s?ch, so sánh trý?c/sau.
+
+### 5. Xu?t d? li?u & báo cáo (`5_Export_Data.py`)
+- T?i v? d? li?u g?c, b?n, ð? làm s?ch (CSV, Excel, JSON, ZIP).
+- Sinh báo cáo markdown t?ng h?p quá tr?nh x? l?.
+- So sánh các b? d? li?u, xu?t toàn b? k?t qu?.
+
+## G?i ? c?i thi?n & m? r?ng
+- Có th? b? sung thêm các bý?c phân tích chuyên sâu: ki?m tra multicollinearity, phân tích týõng quan, clustering máy b?t thý?ng...
+- Thêm các phýõng pháp làm s?ch nâng cao: x? l? d? li?u d?ng text, phát hi?n l?i nh?p li?u b?ng AI, t? ð?ng hóa pipeline.
+- M? r?ng cho các lo?i d? li?u khác ngoài b?o tr? d? ðoán.
+- Tích h?p thêm các báo cáo t? ð?ng, dashboard t?ng h?p.
+
+## Hý?ng d?n m? r?ng & ðóng góp
+- Fork repo, t?o branch m?i, commit và g?i pull request.
+- Ðóng góp thêm các hàm làm s?ch, tr?c quan hóa, báo cáo, ho?c giao di?n m?i.
+- Vui l?ng ghi r? mô t? thay ð?i và test k? trý?c khi g?i PR.
+
+## Liên h? & b?n quy?n
+- Tác gi?: Nhóm phát tri?n KTDL 2025
+- License: MIT
+- Liên h?: [github.com/nmhkha/dm-project](https://github.com/nmhkha/dm-project)
+
+---
+*D? án ph?c v? m?c ðích h?c t?p, th?c hành và nghiên c?u. N?u s? d?ng cho m?c ðích thýõng m?i, vui l?ng liên h? tác gi?.*
