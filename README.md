@@ -1,1 +1,85 @@
-# dm-project
+<div align="center">
+
+# ?? RecipeGenie — N?n T?ng Th?c Hành Làm S?ch D? Li?u
+
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.28+-red.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+
+**RecipeGenie là h? th?ng web giúp th?c hành, mô ph?ng và tr?c quan hóa các k? thu?t làm s?ch, x? l? d? li?u th?c t?.**
+
+[?? Demo (n?u có)](#) • [?? Báo l?i](../../issues) • [? Ð? xu?t tính nãng](../../issues)
+
+</div>
+
+---
+
+## ?? M?c l?c
+
+- [Gi?i thi?u](#gi?i-thi?u)
+- [Tính nãng n?i b?t](#tính-nãng-n?i-b?t)
+- [Cài ð?t & Kh?i ch?y](#cài-ð?t--kh?i-ch?y)
+- [Hý?ng d?n s? d?ng](#hý?ng-d?n-s?-d?ng)
+- [Công ngh? s? d?ng](#công-ngh?-s?-d?ng)
+- [C?u trúc d? án](#c?u-trúc-d?-án)
+- [Ðóng góp](#ðóng-góp)
+- [Gi?y phép](#gi?y-phép)
+
+---
+
+## ?? Gi?i thi?u
+
+RecipeGenie là n?n t?ng h?c t?p, th?c hành và ki?m th? các k? thu?t làm s?ch d? li?u dành cho sinh viên, nhà phân tích d? li?u và gi?ng viên. ?ng d?ng h? tr? t?i lên, sinh d? li?u b?n, làm s?ch, tr?c quan hóa và xu?t d? li?u v?i giao di?n thân thi?n, thao tác tr?c quan.
+
+## ?? Tính nãng n?i b?t
+
+- **T?i lên & khám phá d? li?u**: H? tr? file CSV, xem trý?c, th?ng kê nhanh.
+- **Sinh d? li?u b?n có ki?m soát**: T?o missing values, outliers, l?i phân lo?i, mô ph?ng d? li?u th?c t?.
+- **Làm s?ch d? li?u týõng tác**: Nhi?u phýõng pháp x? l? missing values, phát hi?n & x? l? outlier, chu?n hóa, m? hóa bi?n phân lo?i.
+- **Tr?c quan hóa ch?t lý?ng d? li?u**: Heatmap missing, bi?u ð? phân ph?i, dashboard ch?t lý?ng.
+- **Xu?t d? li?u & báo cáo**: H? tr? nhi?u ð?nh d?ng (CSV, Excel, JSON), sinh báo cáo Markdown t? ð?ng.
+
+## ? Cài ð?t & Kh?i ch?y
+
+```bash
+git clone https://github.com/yourusername/RecipeGenie.git
+cd RecipeGenie
+pip install -r requirements.txt
+
+Kh?i ch?y ?ng d?ng
+
+streamlit run app.py --server.port 5000
+Sau ðó truy c?p http://localhost:5000 trên tr?nh duy?t.
+
+?? Hý?ng d?n s? d?ng
+T?i d? li?u: Vào trang "T?i D? Li?u", upload file CSV, ki?m tra preview.
+Khám phá d? li?u: Xem th?ng kê, bi?u ð? t?ng quan.
+Sinh d? li?u b?n: Tùy ch?nh t? l? missing, outlier, l?i phân lo?i.
+Làm s?ch d? li?u: Ch?n phýõng pháp x? l? phù h?p cho t?ng lo?i l?i.
+Tr?c quan hóa: Theo d?i ch?t lý?ng d? li?u qua dashboard, bi?u ð?.
+Xu?t d? li?u: T?i v? d? li?u ð? làm s?ch ho?c báo cáo chi ti?t.
+??? Công ngh? s? d?ng
+Streamlit: Giao di?n web týõng tác
+Pandas, NumPy: X? l? d? li?u
+Scikit-learn, SciPy: Ti?n x? l?, phát hi?n outlier
+Plotly, Seaborn, Matplotlib: Tr?c quan hóa d? li?u
+Openpyxl, xlsxwriter: H? tr? xu?t Excel
+?? C?u trúc d? án
+RecipeGenie/
+??? app.py                # File ch?y chính
+??? pages/                # Các trang ch?c nãng (Streamlit)
+?   ??? 1_Data_Upload.py
+?   ??? 2_Data_Overview.py
+?   ??? 3_Generate_Dirty_Data.py
+?   ??? 4_Data_Cleaning.py
+?   ??? 5_Export_Data.py
+??? utils/                # Module x? l? d? li?u
+?   ??? data_cleaner.py
+?   ??? data_processor.py
+?   ??? dirty_data_generator.py
+?   ??? visualizer.py
+??? attached_assets/      # Tài s?n ðính kèm (n?u có)
+??? pyproject.toml        # C?u h?nh Python project
+??? requirements.txt      # Danh sách thý vi?n c?n cài
+??? .gitignore            # File lo?i tr? Git
+??? [README.md](http://_vscodecontentref_/2)             # Tài li?u này
