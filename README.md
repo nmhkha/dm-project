@@ -32,7 +32,6 @@
 ### 1. Yêu c?u h? th?ng
 - Python >= 3.8
 - pip
-- Ð? xu?t: Chrome/Edge/Firefox m?i nh?t
 
 ### 2. Cài ð?t thý vi?n
 ```bash
@@ -43,7 +42,7 @@ pip install -r requirements.txt
 ```bash
 streamlit run app.py
 ```
-Sau ðó truy c?p ð?a ch? hi?n th? trên terminal (thý?ng là http://localhost:8501).
+Sau ðó truy c?p ð?a ch? hi?n th? trên terminal 
 
 ## C?u trúc thý m?c
 
@@ -202,11 +201,6 @@ Sau ðó truy c?p ð?a ch? hi?n th? trên terminal (thý?ng là http://localhost:8501)
 - Fork repo, t?o branch m?i, commit và g?i pull request.
 - Ðóng góp thêm các hàm làm s?ch, tr?c quan hóa, báo cáo, ho?c giao di?n m?i.
 - Vui l?ng ghi r? mô t? thay ð?i và test k? trý?c khi g?i PR.
-
-## Liên h? & b?n quy?n
-- Tác gi?: Nhóm phát tri?n KTDL 2025
-- License: MIT
-- Liên h?: [github.com/nmhkha/dm-project](https://github.com/nmhkha/dm-project)
 
 ---
 *D? án ph?c v? m?c ðích h?c t?p, th?c hành và nghiên c?u. N?u s? d?ng cho m?c ðích thýõng m?i, vui l?ng liên h? tác gi?.*
